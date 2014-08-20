@@ -25,6 +25,9 @@
     {
         $class = ['1st', '2nd', 'Me'];
         $this->assertContains('Me',$class);
+        //$this->assertContains(NEEDLE, HAYSTACK, OPTIONAL MESSAGE);
+
+        $this->assertNotContains('Troll',$class);
     }
 
  }
