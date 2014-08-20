@@ -12,6 +12,10 @@
         $greeting = 'Hello, World.';
         $this->assertFalse($greeting === 'Hello.', 'Hello, World.');
 
+        $greeting = 'Hello, World.';
+        $this->assertEquals('Hello, World.', $greeting);
+        // assertEquals accepts three arguments:
+        //$this->assertEquals(EXPECTED, ACTUAL, OPTIONAL MESSAGE);
 
 
 
