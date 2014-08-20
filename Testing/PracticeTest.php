@@ -9,14 +9,16 @@
         $greeting = 'Hello, World.';
         $this->assertTrue($greeting === 'Hello, World.');
 
-        $greeting = 'Hello, World.';
-        $this->assertFalse($greeting === 'Hello.', 'Hello, World.');
+        //$greeting = 'Hello, World.';
+        $this->assertFalse($greeting === 'Hello', 'Hello, World.');
 
-        $greeting = 'Hello, World.';
+        //$greeting = 'Hello, World.';
         $this->assertEquals('Hello, World.', $greeting);
         // assertEquals accepts three arguments:
         //$this->assertEquals(EXPECTED, ACTUAL, OPTIONAL MESSAGE);
 
+        $val = 0;
+        $this->assertSame(0, $val); // true
 
 
         }
