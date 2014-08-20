@@ -19,8 +19,12 @@
 
         $val = 0;
         $this->assertSame(0, $val); // true
-
-
         }
+
+    public function testClassIncludesMe()
+    {
+        $class = ['1st', '2nd', 'Me'];
+        $this->assertContains('Me',$class);
+    }
 
  }
