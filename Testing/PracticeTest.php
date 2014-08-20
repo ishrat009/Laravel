@@ -1,5 +1,5 @@
 <?php
-
+ini_set("date.timezone", "UTC");
 
 class DateFormatter {
     protected $stamp;
@@ -55,9 +55,11 @@ class DateFormatter {
 
      public function testStampMustBeInstanceOfDateTime()
      {
-         $date = new DateFormatter(new DateTime);
+         $dateTimeStamp = new DateTime;
 
-         $this->assertInstanceOf('DateTime', $date->getStamp()); // true
+         $date = new DateFormatter( $dateTimeStamp );
+
+         $this->assertInstanceOf('DateTime', $date->getStamp(),"Not instance of Datetime"); // true
      }
 
  }
