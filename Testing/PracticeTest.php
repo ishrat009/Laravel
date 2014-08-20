@@ -9,10 +9,8 @@
         $greeting = 'Hello, World.';
         $this->assertTrue($greeting === 'Hello, World.');
 
-        //$greeting = 'Hello, World.';
         $this->assertFalse($greeting === 'Hello', 'Hello, World.');
 
-        //$greeting = 'Hello, World.';
         $this->assertEquals('Hello, World.', $greeting);
         // assertEquals accepts three arguments:
         //$this->assertEquals(EXPECTED, ACTUAL, OPTIONAL MESSAGE);
@@ -26,8 +24,19 @@
         $class = ['1st', '2nd', 'Me'];
         $this->assertContains('Me',$class);
         //$this->assertContains(NEEDLE, HAYSTACK, OPTIONAL MESSAGE);
-
         $this->assertNotContains('Troll',$class);
     }
+
+     public function testFamilyRequiresParent()
+    {
+        $family = [
+                    'parents' => ['Joe', 'Abraham'] ,
+                    'children' => ['Timmy', 'Suzy']
+                  ];
+
+         $this->assertArrayHasKey('parents', $family); // true
+    }
+
+     
 
  }
