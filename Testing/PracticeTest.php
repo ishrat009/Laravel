@@ -1,4 +1,7 @@
 <?php
+use Way\Tests\Assert;
+use Way\Tests\Should;
+
 ini_set("date.timezone", "UTC");
 
 class DateFormatter {
@@ -29,6 +32,9 @@ class DateFormatter {
         $this->assertEquals('Hello, World.', $greeting);
         // assertEquals accepts three arguments:
         //$this->assertEquals(EXPECTED, ACTUAL, OPTIONAL MESSAGE);
+
+        $sum = 2+2;
+        $this->assertEquals('4', $sum);
 
         $val = 0;
         $this->assertSame(0, $val); // true
@@ -62,4 +68,12 @@ class DateFormatter {
          $this->assertInstanceOf('DateTime', $date->getStamp(),"Not instance of Datetime"); // true
      }
 
- }
+    /* public function testItWorks()
+         {
+         $name = 'Joe';
+
+         Should::equal('Joe', $name);
+         Assert::equals('Joe', $name);
+         } */
+
+     }
